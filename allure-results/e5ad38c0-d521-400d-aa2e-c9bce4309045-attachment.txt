@@ -1,0 +1,8 @@
+POST Response: {
+  id: 8618014,
+  name: 'Jane Doe',
+  email: 'janedoe1789544827933@example.com',
+  gender: 'female',
+  status: 'active'
+}
+Created User ID: 8618014

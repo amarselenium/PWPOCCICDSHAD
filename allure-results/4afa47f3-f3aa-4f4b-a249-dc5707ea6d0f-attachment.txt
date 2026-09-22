@@ -1,0 +1,2 @@
+Intercepted request: https://naveenautomationlabs.com/www.flipkes.com/api/products GET
+Intercepted request: https://naveenautomationlabs.com/www.flipkes.com/api/products GET

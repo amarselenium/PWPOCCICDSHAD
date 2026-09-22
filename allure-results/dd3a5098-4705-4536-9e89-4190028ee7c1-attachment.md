@@ -1,0 +1,82 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api/users.apifixtures.spec.ts >> POST API Tests >> create user
+- Location: tests/api/users.apifixtures.spec.ts:33:9
+
+# Error details
+
+```
+SyntaxError: Unexpected token 'o', "no available server
+" is not valid JSON
+```
+
+# Test source
+
+```ts
+  1  | import { APIRequestContext } from "@playwright/test";
+  2  | 
+  3  | 
+  4  | export class ApiHelper {
+  5  |     private request: APIRequestContext;
+  6  |     private baseUrl: string;    
+  7  | 
+  8  |     constructor(request: APIRequestContext, baseUrl: string) {
+  9  |         this.request = request;
+  10 |         this.baseUrl = baseUrl;
+  11 |     }
+  12 | 
+  13 |     ///GET call
+  14 | 
+  15 |     async get(endpoint: string, headers?: Record<string, string>) {
+  16 |         const response = await this.request.get(`${this.baseUrl}${endpoint}`, {
+  17 |             headers: headers,
+  18 |         });
+  19 |         return response;
+  20 |     }
+  21 | 
+  22 |     ///POST call
+  23 | 
+  24 |     async post(endpoint:string, data: any, headers?: Record<string, string>) { 
+  25 |         let response = await this.request.post(`${this.baseUrl}${endpoint}`, {
+  26 |             headers: headers,
+  27 |             data: data,
+  28 |         });
+  29 | 
+  30 |         return {
+  31 |            status: response.status(),
+> 32 |            body: await response.json()  
+     |                  ^ SyntaxError: Unexpected token 'o', "no available server
+  33 |         };
+  34 |     }
+  35 | 
+  36 |     async put(endpoint:string, data: any, headers?: Record<string, string>) {
+  37 |         let response = await this.request.put(`${this.baseUrl}${endpoint}`, {
+  38 |             headers: headers,
+  39 |             data: data,
+  40 |         });
+  41 |          return {
+  42 |            status: response.status(),
+  43 |            body: await response.json()  
+  44 |         };
+  45 |     }
+  46 |     
+  47 |     async delete(endpoint:string, headers?: Record<string, string>) {
+  48 |         let response = await this.request.delete(`${this.baseUrl}${endpoint}`, {
+  49 |             headers: headers,
+  50 |         });
+  51 |         return {
+  52 |            status: response.status(),
+  53 |            body: await response.json()  
+  54 |         };
+  55 |     }
+  56 | }   
+  57 | 
+  58 | 
+  59 | 
+```

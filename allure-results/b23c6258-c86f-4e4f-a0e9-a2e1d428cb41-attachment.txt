@@ -1,0 +1,15 @@
+POST Response: {
+  id: 8618069,
+  name: 'John Doe',
+  email: 'johndoe1789547256218@example.com',
+  gender: 'male',
+  status: 'active'
+}
+Created User ID: 8618069
+PUT Response: {
+  id: 8618069,
+  name: 'John Doe Updated',
+  email: 'johndoeupdated1789547256786@example.com',
+  gender: 'male',
+  status: 'active'
+}

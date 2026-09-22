@@ -1,0 +1,10 @@
+Intercepted request: https://naveenautomationlabs.com/www.flipkes.com/api/products GET
+Intercepted request: https://naveenautomationlabs.com/www.flipkes.com/api/products GET
+[
+  {
+    name: 'Macbook Pro',
+    price: 2000,
+    description: 'Apple Macbook Pro 2024'
+  },
+  { name: 'Dell XPS', price: 1500, description: 'Dell XPS 13 2024' }
+]

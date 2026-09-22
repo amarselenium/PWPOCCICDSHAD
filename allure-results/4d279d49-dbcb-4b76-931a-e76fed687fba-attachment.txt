@@ -1,0 +1,72 @@
+[
+  {
+    id: 8614806,
+    name: 'Yoginder Rana',
+    email: 'yoginder_rana@hartmann-mann.test',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8612827,
+    name: 'Bhishma Bhattathiri',
+    email: 'bhattathiri_bhishma@mills.test',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8612648,
+    name: 'Anila Patil',
+    email: 'patil_anila@rath.example',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8612647,
+    name: 'Gov. Krishnadas Bandopadhyay',
+    email: 'krishnadas_gov_bandopadhyay@leuschke-quigley.example',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8612644,
+    name: 'Gauranga Dutta',
+    email: 'gauranga_dutta@heathcote.test',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8612643,
+    name: 'Mayoor Sethi',
+    email: 'mayoor_sethi@gutkowski.example',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8612642,
+    name: 'Swara Devar',
+    email: 'devar_swara@bernhard-emard.test',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8612641,
+    name: 'Rep. Ramesh Naik',
+    email: 'naik_ramesh_rep@herzog.test',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8612640,
+    name: 'Acharyasuta Nayar',
+    email: 'acharyasuta_nayar@blick.example',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8612638,
+    name: 'Yoginder Patil',
+    email: 'yoginder_patil@leffler-murphy.test',
+    gender: 'male',
+    status: 'active'
+  }
+]

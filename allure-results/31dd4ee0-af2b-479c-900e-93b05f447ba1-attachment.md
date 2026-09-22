@@ -1,0 +1,53 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: api/amedeus.oauth2.spec.ts >> OAuth2 Token Generation >> Generate OAuth2 Token
+- Location: tests/api/amedeus.oauth2.spec.ts:11:9
+
+# Error details
+
+```
+Error: apiRequestContext.post: getaddrinfo ENOTFOUND test.api.amadeus.com
+Call log:
+  - → POST https://test.api.amadeus.com/v1/security/oauth2/token
+    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.8010.12 Safari/537.36
+    - accept: */*
+    - accept-encoding: gzip,deflate,br
+    - content-type: application/x-www-form-urlencoded
+    - content-length: 103
+
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect} from '@playwright/test';
+  2  | 
+  3  | let OUTH_CONFIG = {
+  4  |     tokenURL: 'https://test.api.amadeus.com/v1/security/oauth2/token',
+  5  |     client_id: process.env.OAUTH_CLIENT_ID!,
+  6  |     client_secret: process.env.OAUTH_CLIENT_SECRET!,
+  7  |     grant_type: process.env.GRANT_TYPE!
+  8  | };
+  9  | 
+  10 | test.describe('OAuth2 Token Generation', () => {
+  11 |     test('Generate OAuth2 Token', async ({ request }) => {
+> 12 |         let response = await request.post(OUTH_CONFIG.tokenURL, {
+     |                                      ^ Error: apiRequestContext.post: getaddrinfo ENOTFOUND test.api.amadeus.com
+  13 |             form: {
+  14 |                 client_id: OUTH_CONFIG.client_id,
+  15 |                 client_secret: OUTH_CONFIG.client_secret,
+  16 |                 grant_type: OUTH_CONFIG.grant_type
+  17 |             }
+  18 |         }); 
+  19 |         expect(response.status()).toBe(200);
+  20 |         let responseBody = await response.json();
+  21 |         console.log('OAuth2 Token Response:', responseBody);
+  22 |     })
+  23 | });
+```

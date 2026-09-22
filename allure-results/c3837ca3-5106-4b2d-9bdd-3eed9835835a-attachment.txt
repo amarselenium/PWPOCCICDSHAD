@@ -1,0 +1,72 @@
+[
+  {
+    id: 8614812,
+    name: 'Dulari Gupta III',
+    email: 'iii_gupta_dulari@paucek.test',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8614811,
+    name: 'Bhaswar Gandhi Jr.',
+    email: 'jr_gandhi_bhaswar@bartoletti.example',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8614810,
+    name: 'Chakradhar Panicker',
+    email: 'chakradhar_panicker@hansen.example',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8614809,
+    name: 'Bhudeva Bandopadhyay',
+    email: 'bandopadhyay_bhudeva@schulist.example',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8614808,
+    name: 'Asha Kaniyar',
+    email: 'kaniyar_asha@oreilly.test',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8614807,
+    name: 'Vasudha Bhattathiri',
+    email: 'bhattathiri_vasudha@hyatt.example',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8614806,
+    name: 'Yoginder Rana',
+    email: 'yoginder_rana@hartmann-mann.test',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8614805,
+    name: 'Giriraaj Kaur',
+    email: 'kaur_giriraaj@lueilwitz.example',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8612828,
+    name: 'Bela Bhat',
+    email: 'bhat_bela@macgyver.example',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8612827,
+    name: 'Bhishma Bhattathiri',
+    email: 'bhattathiri_bhishma@mills.test',
+    gender: 'female',
+    status: 'inactive'
+  }
+]
