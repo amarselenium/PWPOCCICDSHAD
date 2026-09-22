@@ -67,3 +67,26 @@ jobs:
           name: allure-results
           path: allure-results/
           retention-days: 7
+
+      - name: Notify Slack
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then
+            echo "SLACK_WEBHOOK_URL is not configured; skipping Slack notification."
+            exit 0
+          fi
+
+          payload=$(printf '{"text":"Playwright Tests: *%s*\\nRepository: %s\\nBranch: %s\\nCommit: %s\\nRun: %s"}' \
+            "${{ job.status }}" \
+            "${{ github.repository }}" \
+            "${{ github.ref_name }}" \
+            "${{ github.sha }}" \
+            "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+
+          curl --silent --show-error --fail \
+            -X POST \
+            -H 'Content-type: application/json' \
+            --data "$payload" \
+            "$SLACK_WEBHOOK_URL" || echo "Slack notification could not be sent."
