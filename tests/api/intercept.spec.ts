@@ -18,7 +18,7 @@ test('Intercept with fake data', async ({ page }) => {
             description: "Apple Macbook Pro 2024"
         },
         {
-            name:"Dell XPS",
+            name:"Dell XPSs",
             price: 1500,
             description: "Dell XPS 13 2024"
         }
